@@ -2,6 +2,22 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
@@ -13,10 +29,52 @@
       <img src="./assets/icons/splash_screen_logo.jpeg" class="fade-in">
     </div>
 
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div class="content">
+
+      <div class="container">
+        <h2 class="my-5 text-center">Dropdown #4</h2>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-5">
+            <div class="dropdown custom-dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-link" aria-haspopup="true" aria-expanded="false">
+                All sources
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a href="#" class="dropdown-item">
+                  <strong>Delhi</strong>
+                  <span>Lorem ipsum dolor sit amet harum.</span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <strong>Chennai</strong>
+                  <span>Lorem ipsum dolor sit amet harum.</span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <strong>Kolkata</strong>
+                  <span>Lorem ipsum dolor sit amet harum.</span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <strong>Mumbai</strong>
+                  <span>Lorem ipsum dolor sit amet harum.</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <input class="fancy" type="text" placeholder="Where do you want to go?">
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
