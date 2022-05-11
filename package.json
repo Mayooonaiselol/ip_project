@@ -1,4 +1,21 @@
 {
+  "name": "ip_project",
+  "version": "1.0.0",
+  "description": "TBA",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mayooonaiselol/ip_project.git"
+  },
+  "author": "anshg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mayooonaiselol/ip_project/issues"
+  },
+  "homepage": "https://github.com/Mayooonaiselol/ip_project#readme",
   "devDependencies": {
     "electron": "^18.2.2"
   }
