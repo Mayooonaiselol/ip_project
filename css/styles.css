@@ -6,6 +6,8 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 section{
     width:80vw;
@@ -13,6 +15,44 @@ section{
     padding-top:40;
     line-height: 25px;
 }
+.navbar{
+  top: 48px;
+  background-color: #e8e8e8;
+  height: 100px;
+  width: 100%;
+}
+
+label.logo{
+  color: black;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+.navbar ul{
+  float: right;
+  margin-right: 20px;
+}
+.navbar ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+.navbar ul li a{
+  color: black;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+.navbar a.active,a:hover{
+  background-color: #D3D3D3;
+  transition: .5s;
+  color: black;
+}
+
 h1{
     margin-bottom: 20px;
 }
@@ -60,7 +100,7 @@ h1{
 #titlebar {
   display: block;
   position: fixed;
-  height: 5vh;
+  height: 48px;
   width: 100%;
   background: #f3d304;
 }
@@ -185,7 +225,58 @@ h1{
   display: none;
 }
 
-.frame {
-  height: 95vh;
-  width: 100%;
+.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #777;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown.active > .link,
+.link:hover {
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + .25rem);
+  background-color: white;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.content {
+  padding: 7rem 0; 
 }

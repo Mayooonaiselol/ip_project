@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Mayooonaiselol/ip_project#readme",
   "devDependencies": {
     "electron": "^18.2.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
