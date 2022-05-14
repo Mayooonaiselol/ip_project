@@ -9,11 +9,13 @@
     list-style: none;
     text-decoration: none;
 }
-section{
-    width:80vw;
-    margin:5% auto;
-    padding-top:40;
-    line-height: 25px;
+
+@font-face {
+    font-family: 'pacificoregular';
+    src: url('../fonts/pacifico/pacifico-regular-webfont.woff2') format('woff2'),
+         url('../fonts/pacifico/pacifico-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 .navbar{
   top: 48px;
@@ -27,7 +29,7 @@ label.logo{
   font-size: 35px;
   line-height: 80px;
   padding: 0 100px;
-  font-weight: bold;
+  font-family: pacificoregular;
 }
 .navbar ul{
   float: right;
@@ -239,6 +241,7 @@ h1{
 .dropdown.active > .link,
 .link:hover {
   color: black;
+  text-decoration: none;
 }
 
 .dropdown {
@@ -246,6 +249,7 @@ h1{
 }
 
 .dropdown-menu {
+  justify-content: center;
   position: absolute;
   left: 0;
   top: calc(100% + .25rem);
