@@ -20,6 +20,7 @@
     "electron": "^18.2.2"
   },
   "dependencies": {
+    "angular-ui-grid": "^4.4.10",
     "jquery": "^3.6.0"
   }
 }

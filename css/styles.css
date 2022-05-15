@@ -2,46 +2,49 @@
 
 /* Add styles here to customize the appearance of your app */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 @font-face {
-    font-family: 'pacificoregular';
-    src: url('../fonts/pacifico/pacifico-regular-webfont.woff2') format('woff2'),
-         url('../fonts/pacifico/pacifico-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'pacificoregular';
+  src: url('../fonts/pacifico/pacifico-regular-webfont.woff2') format('woff2'),
+    url('../fonts/pacifico/pacifico-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
-.navbar{
+
+.navbar {
   top: 48px;
   background-color: #e8e8e8;
   height: 100px;
   width: 100%;
 }
 
-label.logo{
+label.logo {
   color: black;
   font-size: 35px;
   line-height: 80px;
   padding: 0 100px;
   font-family: pacificoregular;
 }
-.navbar ul{
+
+.navbar ul {
   float: right;
   margin-right: 20px;
 }
-.navbar ul li{
+
+.navbar ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
 
-.navbar ul li a{
+.navbar ul li a {
   color: black;
   font-size: 17px;
   text-transform: uppercase;
@@ -49,14 +52,15 @@ label.logo{
   border-radius: 3px;
 }
 
-.navbar a.active,a:hover{
+.navbar a.active,
+a:hover {
   background-color: #D3D3D3;
   transition: .5s;
   color: black;
 }
 
-h1{
-    margin-bottom: 20px;
+h1 {
+  margin-bottom: 20px;
 }
 
 .splash {
@@ -238,7 +242,7 @@ h1{
   padding: 0;
 }
 
-.dropdown.active > .link,
+.dropdown.active>.link,
 .link:hover {
   color: black;
   text-decoration: none;
@@ -263,7 +267,7 @@ h1{
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
-.dropdown.active > .link + .dropdown-menu {
+.dropdown.active>.link+.dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -282,5 +286,133 @@ h1{
 }
 
 .content {
-  padding: 7rem 0; 
+  padding: 7rem 0;
+  width: 100%;
+  top: 96px;
+  position: fixed;
+}
+
+.grid {
+  width: 500px;
+  height: 400px;
+}
+
+.myiframe {
+  width: 100%;
+  height: 50%;
+}
+
+/*** Table Styles **/
+
+table {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
 }
