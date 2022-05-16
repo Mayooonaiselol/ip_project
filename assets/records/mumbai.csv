@@ -1,53 +1,53 @@
-SNo,Hotel_name,Address,Price,Rating,Room_Capacity,AC,Restaurant_availabilty,Check_in,Check_out,Contact_Number
-1,Dragonfly_Hotel,Near_Mumbai_Airport,4547,3.9,1,Yes,Yes,14_PM,11_AM,098202 86719
-2,Dragonfly_Hotel,Near_Mumbai_Airport,4547,3.9,2,Yes,Yes,14_PM,11_AM,098202 86719
-3,Dragonfly_Hotel,Near_Mumbai_Airport,5037,3.9,3,Yes,Yes,14_PM,11_AM,098202 86719
-4,Hotel_Kumkum,Grant_Road,1805,4.2,1,Yes,Yes,11_AM,09_AM,075060 38989
-5,Hotel_Kumkum,Grant_Road,1805,4.2,2,Yes,Yes,11_AM,09_AM,075060 38989
-6,Hotel_Kumkum,Grant_Road,2136,4.2,3,Yes,Yes,11_AM,09_AM,075060 38989
-7,Apex_Home,Borivali_East,515,4.4,1,No,No,09_AM,09_AM,098338 59429
-8,Hotel_Broadway_Colaba,South_Mumbai,2090,4.0,2,Yes,No,12_PM,12_PM,098198 39355
-9,Hotel_Broadway_Colaba,South_Mumbai,1792,4.0,1,Yes,No,12_PM,12_PM,098198 39355
-10,Hotel_Broadway_Colaba,South_Mumbai,2389,4.0,3,Yes,No,12_PM,12_PM,098198 39355
-11,Hotel_Broadway_Colaba,South_Mumbai,2747,4.0,4,Yes,No,12_PM,12_PM,098198 39355
-12,The_Westin_Mumbai_Garden_City,Goregaon,24700,4.3,1,Yes,Yes,15_PM,12_PM,022 6147 0000
-13,The_Westin_Mumbai_Garden_City,Goregaon,24700,4.3,2,Yes,Yes,15_PM,12_PM,022 6147 0000
-14,The_Westin_Mumbai_Garden_City,Goregaon,24700,4.3,3,Yes,Yes,15_PM,12_PM,022 6147 0000
-15,Hotel_Avon_Ruby,South_Mumbai,2985,3.8,1,Yes,Yes,13_PM,12_PM,022 4213 3600
-16,Hotel_Avon_Ruby,South_Mumbai,3283,3.8,2,Yes,Yes,13_PM,12_PM,022 4213 3600
-17,Hotel_Avon_Ruby,South_Mumbai,4177,3.8,3,Yes,Yes,13_PM,12_PM,022 4213 3600
-18,Hotel_Kohinoor_Park,South_Mumbai,3532,3.9,1,Yes,Yes,14_PM,11_AM,086910 30949
-19,Hotel_Kohinoor_Park,South_Mumbai,3696,3.9,2,Yes,Yes,14_PM,11_AM,086910 30949
-20,Hotel_Kohinoor_Park,South_Mumbai,3696,3.9,3,Yes,Yes,14_PM,11_AM,086910 30949
-21,J_ESVI_HOTELS,Jogeshwari_West,1985,4.1,1,Yes,No,12_PM,11_AM,076780 63459
-22,J_ESVI_HOTELS,Jogeshwari_West,2113,4.1,2,Yes,No,12_PM,11_AM,076780 63459
-23,J_ESVI_HOTELS,Jogeshwari_West,2825,4.1,3,Yes,No,12_PM,11_AM,076780 63459
-24,ITC_Grand_Central,Near_Mumbai_Airport,10000,4.5,1,Yes,Yes,15_PM,12_PM,022 2410 1010
-25,ITC_Grand_Central,Near_Mumbai_Airport,10500,4.5,2,Yes,Yes,15_PM,12_PM,022 2410 1010
-26,ITC_Grand_Central,Near_Mumbai_Airport,14500,4.5,3,Yes,Yes,15_PM,12_PM,022 2410 1010
-27,Hotel_Peninsula_Redpine,Near_Mumbai_Airport,4834,4.0,1,Yes,Yes,15_PM,12_PM,022 4091 2345
-28,Hotel_Peninsula_Redpine,Near_Mumbai_Airport,4834,4.0,2,Yes,Yes,14_PM,12_PM,022 4091 2345
-29,Hotel_Peninsula_Redpine,Near_Mumbai_Airport,5729,4.0,3,Yes,Yes,14_PM,12_PM,022 4091 2345
-30,Hotel_Golden_Palms,Jogeshwari_West,1533,4.3,1,Yes,Yes,12_PM,11_AM,082915 30923
-31,Hotel_Golden_Palms,Jogeshwari_West,1717,4.3,2,Yes,Yes,12_PM,11_AM,082915 30923
-32,Hotel_Golden_Palms,Jogeshwari_West,2059,4.3,3,Yes,No,12_PM,11_AM,082915 30923
-33,Hotel_Ocean_Suites,Andheri_East,2159,4.1,1,Yes,Yes,12_PM,11_AM,093724 18968
-34,Hotel_Ocean_Suites,Andheri_Easr,2429,4.1,2,Yes,Yes,12_PM,11_AM,093724 18968
-35,Hotel_Ocean_Suites,Andheri_East,2746,4.1,3,Yes,Yes,12_PM,11_AM,093724 18968
-36,Hotel_Bentley,Churchgate,3735,4.4,1,Yes,No,12:30_PM,11_AM,022 2281 5254
-37,Hotel_Bentley,Churchgate,3735,4.4,2,Yes,No,12:30_PM,11_AM,022 2281 5254
-38,Hotel_Bentley,Churchgate,4166,4.4,3,Yes,No,12:30_PM,11_AM,022 2281 5254
-39,Vishal_Hall,Andheri_East,926,4.1,1,Yes,No,12_PM,6_PM,091520 22101
-40,Vishal_Hall,Andheri_East,1058,4.1,2,Yes,No,12_PM,6_PM,091520 22101
-41,Vishal_Hall,Andheri_East,1464,4.1,3,Yes,No,12_PM,6_PM,091520 22101
-42,Grand_Hyatt_Mumbai,Near_Mumbai_Airport,14000,4.5,1,Yes,Yes,15_PM,12_PM,022 6676 1234
-43,Grand_Hyatt_Mumbai,Near_Mumbai_Airport,14000,4.5,2,Yes,Yes,15_PM,12_PM,022 6676 1234
-44,Courtyard_By_Marriott,Near_Mumbai_Airport,11776,4.1,1,Yes,Yes,15_PM,12_PM, 022 6136 9999
-45,Courtyard_By_Marriott,Near_Mumbai_Airport,11776,4.1,2,Yes,Yes,15_PM,12_PM, 022 6136 9999
-46,Courtyard_By_Marriott,Near_Mumbai_Airport,11776,4.1,3,Yes,Yes,15_PM,12_PM, 022 6136 9999
-47,The_Lalit_Mumbai,Near_Mumbai_Airport,10340,4.1,1,Yes,Yes,14_PM,12_PM,022 6699 2222
-48,The_Lalit_Mumbai,Near_Mumbai_Airport,10528,4.1,2,Yes,Yes,14_PM,12_PM,022 6699 2222
-49,The_Lalit_Mumbai,Near_Mumbai_Airport,11279,4.1,3,Yes,Yes,14_PM,12_PM,022 6699 2222
-50,Taj_Santacruz,Near_Mumbai_Airport,15300,4.5,1,Yes,Yes,15_PM,11_AM,022 6211 5211
-51,Taj_Santacruz,Near_Mumbai_Airport,16200,4.5,2,Yes,Yes,15_PM,11_AM,022 6211 5211
-52,Taj_Santacruz,Near_Mumbai_Airport,17550,4.5,3,Yes,Yes,15_PM,11_AM,022 6211 5211
+Hotel name,Address,Price,Rating,Room Capacity,AC,Restaurant availabilty,Check in,Check out,Contact Number
+Dragonfly Hotel,Near Mumbai Airport,4547,3.9,1,Yes,Yes,14 PM,11 AM,098202 86719
+Dragonfly Hotel,Near Mumbai Airport,4547,3.9,2,Yes,Yes,14 PM,11 AM,098202 86719
+Dragonfly Hotel,Near Mumbai Airport,5037,3.9,3,Yes,Yes,14 PM,11 AM,098202 86719
+Hotel Kumkum,Grant Road,1805,4.2,1,Yes,Yes,11 AM,09 AM,075060 38989
+Hotel Kumkum,Grant Road,1805,4.2,2,Yes,Yes,11 AM,09 AM,075060 38989
+Hotel Kumkum,Grant Road,2136,4.2,3,Yes,Yes,11 AM,09 AM,075060 38989
+Apex Home,Borivali East,515,4.4,1,No,No,09 AM,09 AM,098338 59429
+Hotel Broadway Colaba,South Mumbai,2090,4.0,2,Yes,No,12 PM,12 PM,098198 39355
+Hotel Broadway Colaba,South Mumbai,1792,4.0,1,Yes,No,12 PM,12 PM,098198 39355
+Hotel Broadway Colaba,South Mumbai,2389,4.0,3,Yes,No,12 PM,12 PM,098198 39355
+Hotel Broadway Colaba,South Mumbai,2747,4.0,4,Yes,No,12 PM,12 PM,098198 39355
+The Westin Mumbai Garden City,Goregaon,24700,4.3,1,Yes,Yes,15 PM,12 PM,022 6147 0000
+The Westin Mumbai Garden City,Goregaon,24700,4.3,2,Yes,Yes,15 PM,12 PM,022 6147 0000
+The Westin Mumbai Garden City,Goregaon,24700,4.3,3,Yes,Yes,15 PM,12 PM,022 6147 0000
+Hotel Avon Ruby,South Mumbai,2985,3.8,1,Yes,Yes,13 PM,12 PM,022 4213 3600
+Hotel Avon Ruby,South Mumbai,3283,3.8,2,Yes,Yes,13 PM,12 PM,022 4213 3600
+Hotel Avon Ruby,South Mumbai,4177,3.8,3,Yes,Yes,13 PM,12 PM,022 4213 3600
+Hotel Kohinoor Park,South Mumbai,3532,3.9,1,Yes,Yes,14 PM,11 AM,086910 30949
+Hotel Kohinoor Park,South Mumbai,3696,3.9,2,Yes,Yes,14 PM,11 AM,086910 30949
+Hotel Kohinoor Park,South Mumbai,3696,3.9,3,Yes,Yes,14 PM,11 AM,086910 30949
+J ESVI HOTELS,Jogeshwari West,1985,4.1,1,Yes,No,12 PM,11 AM,076780 63459
+J ESVI HOTELS,Jogeshwari West,2113,4.1,2,Yes,No,12 PM,11 AM,076780 63459
+J ESVI HOTELS,Jogeshwari West,2825,4.1,3,Yes,No,12 PM,11 AM,076780 63459
+ITC Grand Central,Near Mumbai Airport,10000,4.5,1,Yes,Yes,15 PM,12 PM,022 2410 1010
+ITC Grand Central,Near Mumbai Airport,10500,4.5,2,Yes,Yes,15 PM,12 PM,022 2410 1010
+ITC Grand Central,Near Mumbai Airport,14500,4.5,3,Yes,Yes,15 PM,12 PM,022 2410 1010
+Hotel Peninsula Redpine,Near Mumbai Airport,4834,4.0,1,Yes,Yes,15 PM,12 PM,022 4091 2345
+Hotel Peninsula Redpine,Near Mumbai Airport,4834,4.0,2,Yes,Yes,14 PM,12 PM,022 4091 2345
+Hotel Peninsula Redpine,Near Mumbai Airport,5729,4.0,3,Yes,Yes,14 PM,12 PM,022 4091 2345
+Hotel Golden Palms,Jogeshwari West,1533,4.3,1,Yes,Yes,12 PM,11 AM,082915 30923
+Hotel Golden Palms,Jogeshwari West,1717,4.3,2,Yes,Yes,12 PM,11 AM,082915 30923
+Hotel Golden Palms,Jogeshwari West,2059,4.3,3,Yes,No,12 PM,11 AM,082915 30923
+Hotel Ocean Suites,Andheri East,2159,4.1,1,Yes,Yes,12 PM,11 AM,093724 18968
+Hotel Ocean Suites,Andheri Easr,2429,4.1,2,Yes,Yes,12 PM,11 AM,093724 18968
+Hotel Ocean Suites,Andheri East,2746,4.1,3,Yes,Yes,12 PM,11 AM,093724 18968
+Hotel Bentley,Churchgate,3735,4.4,1,Yes,No,12:30 PM,11 AM,022 2281 5254
+Hotel Bentley,Churchgate,3735,4.4,2,Yes,No,12:30 PM,11 AM,022 2281 5254
+Hotel Bentley,Churchgate,4166,4.4,3,Yes,No,12:30 PM,11 AM,022 2281 5254
+Vishal Hall,Andheri East,926,4.1,1,Yes,No,12 PM,6 PM,091520 22101
+Vishal Hall,Andheri East,1058,4.1,2,Yes,No,12 PM,6 PM,091520 22101
+Vishal Hall,Andheri East,1464,4.1,3,Yes,No,12 PM,6 PM,091520 22101
+Grand Hyatt Mumbai,Near Mumbai Airport,14000,4.5,1,Yes,Yes,15 PM,12 PM,022 6676 1234
+Grand Hyatt Mumbai,Near Mumbai Airport,14000,4.5,2,Yes,Yes,15 PM,12 PM,022 6676 1234
+Courtyard By Marriott,Near Mumbai Airport,11776,4.1,1,Yes,Yes,15 PM,12 PM, 022 6136 9999
+Courtyard By Marriott,Near Mumbai Airport,11776,4.1,2,Yes,Yes,15 PM,12 PM, 022 6136 9999
+Courtyard By Marriott,Near Mumbai Airport,11776,4.1,3,Yes,Yes,15 PM,12 PM, 022 6136 9999
+The Lalit Mumbai,Near Mumbai Airport,10340,4.1,1,Yes,Yes,14 PM,12 PM,022 6699 2222
+The Lalit Mumbai,Near Mumbai Airport,10528,4.1,2,Yes,Yes,14 PM,12 PM,022 6699 2222
+The Lalit Mumbai,Near Mumbai Airport,11279,4.1,3,Yes,Yes,14 PM,12 PM,022 6699 2222
+Taj Santacruz,Near Mumbai Airport,15300,4.5,1,Yes,Yes,15 PM,11 AM,022 6211 5211
+Taj Santacruz,Near Mumbai Airport,16200,4.5,2,Yes,Yes,15 PM,11 AM,022 6211 5211
+Taj Santacruz,Near Mumbai Airport,17550,4.5,3,Yes,Yes,15 PM,11 AM,022 6211 5211

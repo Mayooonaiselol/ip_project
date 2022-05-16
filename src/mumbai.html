@@ -48,6 +48,9 @@
         <label class="logo">Holiday Hype</label>
         <ul>
             <li>
+                <a href="../src/form.html" class="btn">Advertize your hotel!</a>
+            </li>
+            <li>
                 <a href="../src/mainpage.html" class="btn">Home</a>
             </li>
         </ul>
@@ -56,10 +59,6 @@
     <div class="content">
         <div class="container">
             <h3>Search Hotels in "Mumbai"</h3>
-            <?PHP
-            echo shell_exec("python ../python/mumbai.py");
-            ?>
-            <!-- somewhere here -->
             <iframe src="../table/mumbai.html" id="myiframe" class="myiframe"></iframe>
         </div>
     </div>

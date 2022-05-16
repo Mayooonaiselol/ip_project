@@ -13,6 +13,8 @@ f.truncate()
  
 # to read csv file named "samplee"
 a = pd.read_csv("C:/Users/anshg/ip_project/assets/records/mumbai.csv")
+
+a.index = a.index + 1
  
 # to save as html file
 # named as "Table"

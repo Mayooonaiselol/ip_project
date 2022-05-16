@@ -6,8 +6,8 @@ const ipc = ipcMain
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 1100,
+    height: 700,
     minWidth: 940,
     minHeight: 560,
     frame: false,
