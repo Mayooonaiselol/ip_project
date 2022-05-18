@@ -8,12 +8,20 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: robotoregular;
 }
 
 @font-face {
   font-family: 'pacificoregular';
   src: url('../fonts/pacifico/pacifico-regular-webfont.woff2') format('woff2'),
     url('../fonts/pacifico/pacifico-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../fonts/roboto/Roboto-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }
@@ -57,6 +65,7 @@ a:hover {
   background-color: #D3D3D3;
   transition: .5s;
   color: black;
+  text-decoration: none;
 }
 
 h1 {
@@ -286,10 +295,20 @@ h1 {
 }
 
 .content {
-  padding: 7rem 0;
+  padding: 2rem 0;
   width: 100%;
-  top: 96px;
+  top: 148px;
   position: fixed;
+}
+
+.content-form {
+  padding: 2rem 0;
+  width: 100%;
+  top: 148px;
+  position: fixed;
+  max-height: 80vh;
+  /* min-height: 50vh; */
+  overflow-y: scroll;
 }
 
 .grid {
@@ -416,3 +435,73 @@ td.text-center {
 td.text-right {
   text-align: right;
 }
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  background: none; }
+  .form-control:active, .form-control:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #000; }
+
+.col-form-label {
+  color: #000;
+  font-size: 13px; }
+
+.btn, .form-control, .custom-select {
+  height: 45px; }
+
+.custom-select:active, .custom-select:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #000; }
+
+.btn {
+  border: none;
+  border-radius: 0;
+  font-size: 12px;
+  letter-spacing: .2rem;
+  text-transform: uppercase; }
+  .btn.btn-primary {
+    background: #1b1e24;
+    color: #fff;
+    padding: 15px 20px; }
+  .btn:hover {
+    color: #fff; }
+  .btn:active, .btn:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+label.error {
+  font-size: 12px;
+  color: red; }
+
+#message {
+  resize: vertical; }
+
+#form-message-warning, #form-message-success {
+  display: none; }
+
+#form-message-warning {
+  color: #B90B0B; }
+
+#form-message-success {
+  color: #55A44E;
+  font-size: 18px;
+  font-weight: bold; }
+
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000; }
