@@ -63,59 +63,59 @@
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">Hotel name *</label>
                                 <input type="text" class="form-control" name="Hotel name" id="hotel"
-                                    placeholder="Hotel name">
+                                    placeholder="Hotel name" required>
                             </div>
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">Address *</label>
                                 <input type="text" class="form-control" name="Address" id="address"
-                                    placeholder="Address">
+                                    placeholder="Address" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">Price *</label>
-                                <input type="text" class="form-control" name="Price" id="price"
-                                    placeholder="Price (in Rupees)">
+                                <input type="number" class="form-control" name="Price" id="price"
+                                    placeholder="Price (in Rupees)" required>
                             </div>
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">Rating *</label>
-                                <input type="text" class="form-control" name="Rating" id="rating" placeholder="Rating">
+                                <input type="text" class="form-control" name="Rating" id="rating" placeholder="Rating" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">Room capacity *</label>
                                 <input type="text" class="form-control" name="Room Capacity" id="room capacity"
-                                    placeholder="Room capacity">
+                                    placeholder="Room capacity" required>
                             </div>
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">AC *</label>
-                                <input type="text" class="form-control" name="AC" id="AC" placeholder="AC">
+                                <input type="text" class="form-control" name="AC" id="AC" placeholder="AC" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">Restaurant availability *</label>
                                 <input type="text" class="form-control" name="Restaurant availability" id="Restaurant"
-                                    placeholder="Restaurant availability">
+                                    placeholder="Restaurant availability" required>
                             </div>
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">Check in *</label>
                                 <input type="time" class="form-control" name="Check in" id="check_in"
-                                    placeholder="Check in">
+                                    placeholder="Check in" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">Check out *</label>
                                 <input type="time" class="form-control" name="Check out" id="check_out"
-                                    placeholder="Check out">
+                                    placeholder="Check out" required>
                             </div>
                             <div class="col-md-6 form-group mb-5">
                                 <label for="" class="col-form-label">Contact *</label>
                                 <input type="tel" class="form-control" name="Contact Number" id="contact"
-                                    placeholder="Contact">
+                                    placeholder="Contact" required>
                             </div>
                         </div>
                         <div class="row">
@@ -133,10 +133,6 @@
     <script src="../renderer.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/form_delhi.js" defer></script>
-    <script defer>
-        const { exec } = require('node:child_process');
-        exec('python ./python/delhi_jsoncsv.py');
-    </script>
 </body>
 
 </html>

@@ -13,7 +13,6 @@ function handleSubmit_kolkata(event) {
         if (err) console.log('error', err);
     });
 
-    const { exec } = require('node:child_process');
     exec('python ./python/kolkata_jsoncsv.py');
 
     window.location.replace("../src/form_end.html");

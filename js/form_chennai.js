@@ -13,7 +13,6 @@ function handleSubmit_chennai(event) {
         if (err) console.log('error', err);
     });
 
-    const { exec } = require('node:child_process');
     exec('python ./python/chennai_jsoncsv.py');
 
     window.location.replace("../src/form_end.html");
@@ -21,4 +20,3 @@ function handleSubmit_chennai(event) {
 
 const cform = document.getElementById('form_chennai');
 cform.addEventListener("submit", handleSubmit_chennai);
-

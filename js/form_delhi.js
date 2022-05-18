@@ -13,7 +13,6 @@ function handleSubmit_delhi(event) {
         if (err) console.log('error', err);
     });
 
-    const { exec } = require('node:child_process');
     exec('python ./python/delhi_jsoncsv.py');
 
     window.location.replace("../src/form_end.html");
