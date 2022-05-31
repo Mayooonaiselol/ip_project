@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+const fs = require('fs');
 const ipc = ipcMain
 
 function createWindow() {
@@ -14,6 +15,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
+      enableRemoteModule: true,
       devTools: true,
       preload: path.join(__dirname, 'preload.js'),
     }
@@ -65,3 +67,22 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+ipc.on('form-city', function (event, cityname, contents) {
+  const dataPath = app.getPath('userData');
+  const dir = path.join(dataPath, 'jsondata');
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, {
+      recursive: true
+    });
+  }
+  const filePath = path.join(dir, cityname);
+  fs.writeFileSync(filePath, contents, function (err, result) {
+    if (err) console.log('error', err);
+  });
+
+  const event_response = "yes"
+  event.reply('form-city-reply', event_response)
+
+  // window.location.replace("../src/form_end.html");
+})

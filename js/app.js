@@ -1,5 +1,4 @@
 const { exec } = require('node:child_process');
-
 let viewportHeight = window.innerHeight;
 let viewportWidth = window.innerWidth;
 

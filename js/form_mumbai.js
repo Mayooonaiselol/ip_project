@@ -1,22 +1,24 @@
-var fs = require('fs');
+document.addEventListener('DOMContentLoaded', function () {
+    const mform = document.getElementById('form_mumbai');
+    mform.addEventListener("submit", handleSubmit_mumbai);
 
-function handleSubmit_mumbai(event) {
-    event.preventDefault();
+    function handleSubmit_mumbai(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
 
-    const data = new FormData(event.target);
+        const value = Object.fromEntries(data.entries());
+        var contents = JSON.stringify(value);
 
-    const value = Object.fromEntries(data.entries());
-    var dictstring = JSON.stringify(value);
+        console.log({ value });
+        const cityname = 'mumbai.json'
+        ipcRenderer.send('form-city', cityname, contents)
 
-    console.log({ value });
-    fs.writeFile("./jsondata/mumbai.json", dictstring, function (err, result) {
-        if (err) console.log('error', err);
-    });
-
-    exec('python ./python/mumbai_jsoncsv.py');
-
-    window.location.replace("../src/form_end.html");
-}
-
-const mform = document.getElementById('form_mumbai');
-mform.addEventListener("submit", handleSubmit_mumbai);
+        ipcRenderer.on('form-city-reply', function (event_response) {
+            if (event_response = "yes") {
+                window.location.replace("../src/form_end.html")
+            } else {
+                console.log("fail")
+            }
+        })
+    }
+})
