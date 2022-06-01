@@ -3,6 +3,8 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const ipc = ipcMain
+const dataPath = app.getPath('userData');
+const { exec } = require('node:child_process');
 
 function createWindow() {
   // Create the browser window.
@@ -69,7 +71,6 @@ app.on('window-all-closed', function () {
 // code. You can also put them in separate files and require them here.
 
 ipc.on('form-city', function (event, cityname, contents) {
-  const dataPath = app.getPath('userData');
   const dir = path.join(dataPath, 'jsondata');
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, {
@@ -84,5 +85,44 @@ ipc.on('form-city', function (event, cityname, contents) {
   const event_response = "yes"
   event.reply('form-city-reply', event_response)
 
-  // window.location.replace("../src/form_end.html");
+  if (cityname = 'mumbai.json') {
+    exec('python ./python/mumbai_jsoncsv.py');
+  } else if (cityname = 'chennai.json') {
+    exec('python ./python/chennai_jsoncsv.py');
+  } else if (cityname = 'delhi.json') {
+    exec('python ./python/delhi_jsoncsv.py');
+  } else if (cityname = 'kolkata.json') {
+    exec('python ./python/kolkata_jsoncsv.py');
+  } else {
+    console.log('error')
+  }
+})
+
+ipc.on('inspect', function () {
+  const csvdir = path.join(dataPath, 'records');
+
+  if (!fs.existsSync(csvdir)) {
+    fs.mkdirSync(csvdir, { recursive: true });
+  }
+
+  const delhicsv = path.join(csvdir, 'delhi.csv');
+  const chennaicsv = path.join(csvdir, 'chennai.csv');
+  const kolkatacsv = path.join(csvdir, 'kolkata.csv');
+  const mumbaicsv = path.join(csvdir, 'mumbai.csv');
+
+  if (!fs.existsSync(delhicsv)) {
+    fs.copyFileSync('./assets/records/delhi.csv', delhicsv);
+  }
+
+  if (!fs.existsSync(chennaicsv)) {
+    fs.copyFileSync('./assets/records/chennai.csv', chennaicsv);
+  }
+
+  if (!fs.existsSync(kolkatacsv)) {
+    fs.copyFileSync('./assets/records/kolkata.csv', kolkatacsv);
+  }
+
+  if (!fs.existsSync(mumbaicsv)) {
+    fs.copyFileSync('./assets/records/mumbai.csv', mumbaicsv);
+  }
 })
