@@ -85,17 +85,15 @@ ipc.on('form-city', function (event, cityname, contents) {
   const event_response = "yes"
   event.reply('form-city-reply', event_response)
 
-  if (cityname = 'mumbai.json') {
-    exec('python ./python/mumbai_jsoncsv.py');
-  } else if (cityname = 'chennai.json') {
-    exec('python ./python/chennai_jsoncsv.py');
-  } else if (cityname = 'delhi.json') {
-    exec('python ./python/delhi_jsoncsv.py');
-  } else if (cityname = 'kolkata.json') {
-    exec('python ./python/kolkata_jsoncsv.py');
-  } else {
-    console.log('error')
-  }
+  const executePythonConfig = {
+    'mumbai.json': () => exec('python ./python/mumbai_jsoncsv.py'),
+    'chennai.json': () => exec('python ./python/chennai_jsoncsv.py'),
+    'delhi.json': () => exec('python ./python/delhi_jsoncsv.py'),
+    'kolkata.json': () => exec('python ./python/kolkata_jsoncsv.py'),
+  };
+
+  executePythonConfig[cityname]?.();
+
 })
 
 ipc.on('inspect', function () {
@@ -105,24 +103,12 @@ ipc.on('inspect', function () {
     fs.mkdirSync(csvdir, { recursive: true });
   }
 
-  const delhicsv = path.join(csvdir, 'delhi.csv');
-  const chennaicsv = path.join(csvdir, 'chennai.csv');
-  const kolkatacsv = path.join(csvdir, 'kolkata.csv');
-  const mumbaicsv = path.join(csvdir, 'mumbai.csv');
+  const fileNames = ['delhi.csv', 'chennai.csv', 'kolkata.csv', 'mumbai.csv'];
 
-  if (!fs.existsSync(delhicsv)) {
-    fs.copyFileSync('./assets/records/delhi.csv', delhicsv);
-  }
-
-  if (!fs.existsSync(chennaicsv)) {
-    fs.copyFileSync('./assets/records/chennai.csv', chennaicsv);
-  }
-
-  if (!fs.existsSync(kolkatacsv)) {
-    fs.copyFileSync('./assets/records/kolkata.csv', kolkatacsv);
-  }
-
-  if (!fs.existsSync(mumbaicsv)) {
-    fs.copyFileSync('./assets/records/mumbai.csv', mumbaicsv);
+  for (let file of fileNames) {
+    const filePath = path.join(csvdir, file);
+    if (!fs.existsSync(filePath)) {
+      fs.copyFileSync(`./assets/records/${file}`, filePath);
+    }
   }
 })
