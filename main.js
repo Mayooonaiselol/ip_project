@@ -111,4 +111,19 @@ ipc.on('inspect', function () {
       fs.copyFileSync(`./assets/records/${file}`, filePath);
     }
   }
+
+  const tabledir = path.join(dataPath, 'table');
+
+  if (!fs.existsSync(tabledir)) {
+    fs.mkdirSync(tabledir, { recursive: true });
+  }
+
+  const tableNames = ['delhi.html', 'chennai.html', 'kolkata.html', 'mumbai.html'];
+
+  for (let file of tableNames) {
+    const filePath = path.join(tabledir, file);
+    if (!fs.existsSync(filePath)) {
+      fs.writeFileSync(filePath, "");
+    }
+  }
 })
