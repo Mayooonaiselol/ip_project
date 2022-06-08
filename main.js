@@ -126,4 +126,11 @@ ipc.on('inspect', function () {
       fs.writeFileSync(filePath, "");
     }
   }
+
+  exec('python ./python/chennai.py')
+})
+
+ipc.on('htmlload', function (event, city) {
+  const file = path.join(dataPath, 'table/chennai.html');
+  event.reply('htmlload-reply', file);
 })

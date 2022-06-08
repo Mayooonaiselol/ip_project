@@ -1,16 +1,17 @@
 # Python program to convert
 # CSV to HTML Table
 
-from pathlib import Path 
+from pathlib import Path
+from matplotlib.style import use 
 import pandas as pd
+from script import *
 
-tbfolder = Path("./table/")
-csvfolder = Path("./assets/records/")
+userdata = get_user_data_dir('ip_project')
 
-htmlfile = tbfolder / "chennai.html"
-csvrecord = csvfolder / "chennai.csv"
+tbfile = Path(userdata, "table/chennai.html")
+csvrecord = Path(userdata, "records/chennai.csv")
 
-f = open(htmlfile, "r+") 
+f = open(tbfile, "r+") 
   
 # absolute file positioning
 f.seek(0) 
@@ -25,13 +26,13 @@ a.index = a.index + 1
  
 # to save as html file
 # named as "Table"
-a.to_html(htmlfile)
+a.to_html(tbfile)
  
 # assign it to a
 # variable (string)
 html_file = a.to_html()
 
-with open(htmlfile, "a+") as file_object:
+with open(tbfile, "a+") as file_object:
     # Move read cursor to the start of file.
     file_object.seek(0)
     # If file is not empty then append '\n'

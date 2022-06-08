@@ -1,9 +1,13 @@
 import pandas as pd
 from pathlib import Path
 import json
+from script import *
+
+userdata = get_user_data_dir('ip_project')
 
 # set path to file
-p = Path(r'.\jsondata\chennai.json')
+p = Path(userdata, r'jsondata/chennai.json')
+g = Path(userdata, r'records/chennai.csv')
 
 # read json
 with p.open('r', encoding='utf-8') as f:
@@ -13,4 +17,4 @@ with p.open('r', encoding='utf-8') as f:
 df = pd.json_normalize(data)
 
 # save to csv
-df.to_csv('./assets/records/chennai.csv', mode="a", index=False, header=False, encoding='utf-8')
+df.to_csv(g, mode="a", index=False, header=False, encoding='utf-8')
