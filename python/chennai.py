@@ -2,11 +2,13 @@
 # CSV to HTML Table
 
 from pathlib import Path
-from matplotlib.style import use 
 import pandas as pd
 from script import *
 
 userdata = get_user_data_dir('ip_project')
+
+p = Path("./css/styles.css").resolve()
+c = str(p)
 
 tbfile = Path(userdata, "table/chennai.html")
 csvrecord = Path(userdata, "records/chennai.csv")
@@ -40,4 +42,12 @@ with open(tbfile, "a+") as file_object:
     if len(data) > 0 :
         file_object.write("\n")
     # Append text at the end of file
-    file_object.write("<link href='../css/styles.css' rel='stylesheet'>")
+    print(c)
+    file_object.write("<link href='" + c + "' " "rel='stylesheet'>")
+
+new_line = "<!DOCTYPE html>\n"
+
+with open(tbfile, 'r+') as file:
+   content = file.read()
+   file.seek(0)
+   file.write(new_line + content)

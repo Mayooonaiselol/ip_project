@@ -7,10 +7,7 @@ function warning() {
 document.getElementById("dropdown").addEventListener("click", run_py);
 
 function run_py() {
-  exec('python ./python/delhi.py');
-  exec('python ./python/kolkata.py');
-  exec('python ./python/mumbai.py');
-  exec('python ./python/chennai.py');
+  ipcRenderer.send('script_run')
 }
 
 document.addEventListener("click", e => {

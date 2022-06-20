@@ -134,3 +134,10 @@ ipc.on('htmlload', function (event, city) {
   const file = path.join(dataPath, 'table/chennai.html');
   event.reply('htmlload-reply', file);
 })
+
+ipc.on('script_run', function () {
+  exec('python ./python/delhi.py');
+  exec('python ./python/kolkata.py');
+  exec('python ./python/mumbai.py');
+  exec('python ./python/chennai.py');
+})

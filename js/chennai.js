@@ -1,7 +1,9 @@
-const { ipcRenderer } = require("electron");
+const iframe = document.getElementById('myiframe');
 
-ipcRenderer.send('htmlload');
-ipcRenderer.on('htmlload-reply', function(file) {
-    const iframe = document.getElementById('myiframe');
-    iframe.src = file
+document.addEventListener('DOMContentLoaded', function () {
+    city = "chennai";
+    ipcRenderer.send('htmlload', city);
+    ipcRenderer.on('htmlload-reply', function (event, file) {
+        iframe.src = file;
+    })
 })
