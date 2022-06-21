@@ -9,12 +9,11 @@
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
   <link href="css/styles.css" rel="stylesheet">
-  <link href="./fonts/Linearicons-Free-v1.0.0/Web Font/style.css" rel="stylesheet">
   <title>Holiday Hype</title>
 </head>
 
 <body>
-
+  <link href="./fonts/Linearicons-Free-v1.0.0/Web Font/style.css" rel="stylesheet">
   <header id="titlebar">
     <div id="drag-region">
       <div id="window-title">
@@ -46,6 +45,7 @@
     <img src="./assets/icons/splash_screen_logo.jpeg" class="fade-in">
   </div>
 
+  <script src="./js/splash.js"></script>
   <nav class="navbar">
     <label class="logo">Holiday Hype</label>
     <ul>
@@ -61,7 +61,8 @@
   <div class="content">
     <div class="container">
       <div class="dropdown" data-dropdown>
-        <button class="link" id="dropdown" data-dropdown-button><span class="lnr lnr-magnifier"></span> Select a city</button>
+        <button class="link" id="dropdown" data-dropdown-button><span class="lnr lnr-magnifier"></span> Select a
+          city</button>
         <div class="dropdown-menu information-grid">
           <div>
             <div class="dropdown-links">
@@ -74,12 +75,12 @@
         </div>
       </div>
     </div>
+  <script async src="./js/dropdown.js"></script>
   </div>
 
   <script src="./renderer.js"></script>
-  <script src="js/app.js"></script>
-  <script src="./js/splash.js"></script>
-  <script src="./js/dropdown.js"></script>
 </body>
+
+<script defer src="js/app.js"></script>
 
 </html>

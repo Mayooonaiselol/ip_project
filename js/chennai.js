@@ -1,9 +1,8 @@
 const iframe = document.getElementById('myiframe');
 
 document.addEventListener('DOMContentLoaded', function () {
-    city = "chennai";
-    ipcRenderer.send('htmlload', city);
-    ipcRenderer.on('htmlload-reply', function (event, file) {
+    ipcRenderer.send('htmlload-chennai');
+    ipcRenderer.on('chennai-reply', function (event, file) {
         iframe.src = file;
     })
 })

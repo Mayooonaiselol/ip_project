@@ -14,6 +14,7 @@ function createWindow() {
     minWidth: 940,
     minHeight: 560,
     frame: false,
+    icon: path.join(__dirname, 'assets/icons/64.png'),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -130,9 +131,24 @@ ipc.on('inspect', function () {
   exec('python ./python/chennai.py')
 })
 
-ipc.on('htmlload', function (event, city) {
+ipc.on('htmlload-chennai', function (event) {
   const file = path.join(dataPath, 'table/chennai.html');
-  event.reply('htmlload-reply', file);
+  event.reply('chennai-reply', file);
+})
+
+ipc.on('htmlload-delhi', function (event) {
+  const file = path.join(dataPath, 'table/delhi.html');
+  event.reply('delhi-reply', file);
+})
+
+ipc.on('htmlload-kolkata', function (event) {
+  const file = path.join(dataPath, 'table/kolkata.html');
+  event.reply('kolkata-reply', file);
+})
+
+ipc.on('htmlload-mumbai', function (event) {
+  const file = path.join(dataPath, 'table/mumbai.html');
+  event.reply('mumbai-reply', file);
 })
 
 ipc.on('script_run', function () {
