@@ -1,9 +1,3 @@
-document.getElementById("ad").addEventListener("click", warning);
-
-function warning() {
-  window.alert("Select a city first!");
-}
-
 document.getElementById("dropdown").addEventListener("click", run_py);
 
 function run_py() {
