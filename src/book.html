@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../fonts/Linearicons-Free-v1.0.0/Web Font/style.css" rel="stylesheet">
+    <title>Holiday Hype</title>
+</head>
+
+<body>
+
+    <header id="titlebar">
+        <div id="drag-region">
+            <div id="window-title">
+                <span>Holiday Hype</span>
+            </div>
+            <div id="window-controls">
+
+                <div class="button" id="min-button">
+                    <img class="icon" srcset="../assets/icons/chevron-down.svg" draggable="false" />
+                </div>
+
+                <div class="button" id="max-button">
+                    <img class="icon" srcset="../assets/icons/maximize-2.svg" draggable="false" />
+                </div>
+
+                <div class="button" id="restore-button">
+                    <img class="icon" srcset="../assets/icons/minimize-2.svg" draggable="false" />
+                </div>
+
+                <div class="button" id="close-button">
+                    <img class="icon" srcset="../assets/icons/x.svg" draggable="false" />
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <label class="logo">Holiday Hype</label>
+        <ul>
+            <li>
+                <a href="../src/mainpage.html"><span class="lnr lnr-home"></span> Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content-form">
+        <div class="container">
+            <div class="col-md-8">
+                <div class="form h-100">
+                    <h3>Book a hotel</h3>
+                    <form class="mb-5" method="post" name="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 form-group mb-5">
+                                <label for="" class="col-form-label">Hotel name *</label>
+                                <input type="text" class="form-control" name="Hotel name" id="hotel"
+                                    placeholder="Hotel name" required>
+                            </div>
+                            <div class="col-md-6 form-group mb-5">
+                                <label for="" class="col-form-label">Address *</label>
+                                <input type="text" class="form-control" name="City" id="city"
+                                    placeholder="City" required>
+                                <input type="radio" id="yes" value="Yes">
+                                <label for="yes">Yes</label><br>
+                                <input type="radio" id="css" value="No">
+                                <label for="no">No</label><br>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group mb-5">
+                                <label for="" class="col-form-label">Room capacity *</label>
+                                <input type="text" class="form-control" name="Adults" id="adults"
+                                    placeholder="Adults" required>
+                            </div>
+                            <div class="col-md-6 form-group mb-5">
+                                <label for="" class="col-form-label">AC *</label>
+                                <input type="radio" id="yes" value="Yes">
+                                <label for="yes">Yes</label><br>
+                                <input type="radio" id="css" value="No">
+                                <label for="no">No</label><br>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group mb-5">
+                                <label for="" class="col-form-label">Check in *</label>
+                                <input type="date" class="form-control" name="Check in" id="check_in"
+                                    placeholder="Check in" required>
+                            </div>
+                            <div class="col-md-6 form-group mb-5">
+                                <label for="" class="col-form-label">Check out *</label>
+                                <input type="date" class="form-control" name="Check out" id="check_out"
+                                    placeholder="Check out" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group mb-5">
+                                <label for="" class="col-form-label">Contact *</label>
+                                <input type="tel" class="form-control" name="Contact Number" id="contact"
+                                    placeholder="Contact" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <input type="submit" value="Submit" class="btn btn-primary rounded-0 py-2 px-4">
+                                <span class="submitting"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../renderer.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
