@@ -109,7 +109,8 @@ ipc.on('inspect', function () {
   for (let file of fileNames) {
     const filePath = path.join(csvdir, file);
     if (!fs.existsSync(filePath)) {
-      fs.copyFileSync(`./assets/records/${file}`, filePath);
+      csvfiles = path.join(__dirname, `assets/records/${file}`)
+      fs.copyFileSync(csvfiles, filePath);
     }
   }
 
@@ -129,6 +130,9 @@ ipc.on('inspect', function () {
   }
 
   exec('python ./python/chennai.py')
+  exec('python ./python/delhi.py')
+  exec('python ./python/kolkata.py')
+  exec('python ./python/mumbai.py')
 })
 
 ipc.on('htmlload-chennai', function (event) {

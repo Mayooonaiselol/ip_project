@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         ipcRenderer.on('form-city-reply', function (event_response) {
             if (event_response = "yes") {
-                window.location.replace("../src/form_end.html")
+                window.location.replace("../src/thanks.html")
             } else {
                 console.log("fail")
             }
