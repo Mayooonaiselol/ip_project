@@ -54,7 +54,7 @@ function createWindow() {
 app.whenReady().then(() => {
   createWindow()
 
-  app.on('activate', function () {
+  app.on('activate', function() {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
@@ -64,14 +64,14 @@ app.whenReady().then(() => {
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
-app.on('window-all-closed', function () {
+app.on('window-all-closed', function() {
   if (process.platform !== 'darwin') app.quit()
 })
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-ipc.on('form-city', function (event, cityname, contents) {
+ipc.on('form-city', function(event, cityname, contents) {
   const dir = path.join(dataPath, 'jsondata');
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, {
@@ -79,7 +79,7 @@ ipc.on('form-city', function (event, cityname, contents) {
     });
   }
   const filePath = path.join(dir, cityname);
-  fs.writeFileSync(filePath, contents, function (err, result) {
+  fs.writeFileSync(filePath, contents, function(err, result) {
     if (err) console.log('error', err);
   });
 
@@ -97,7 +97,7 @@ ipc.on('form-city', function (event, cityname, contents) {
 
 })
 
-ipc.on('inspect', function () {
+ipc.on('inspect', function() {
   const csvdir = path.join(dataPath, 'records');
 
   if (!fs.existsSync(csvdir)) {
@@ -135,27 +135,27 @@ ipc.on('inspect', function () {
   exec('python ./python/mumbai.py')
 })
 
-ipc.on('htmlload-chennai', function (event) {
+ipc.on('htmlload-chennai', function(event) {
   const file = path.join(dataPath, 'table/chennai.html');
   event.reply('chennai-reply', file);
 })
 
-ipc.on('htmlload-delhi', function (event) {
+ipc.on('htmlload-delhi', function(event) {
   const file = path.join(dataPath, 'table/delhi.html');
   event.reply('delhi-reply', file);
 })
 
-ipc.on('htmlload-kolkata', function (event) {
+ipc.on('htmlload-kolkata', function(event) {
   const file = path.join(dataPath, 'table/kolkata.html');
   event.reply('kolkata-reply', file);
 })
 
-ipc.on('htmlload-mumbai', function (event) {
+ipc.on('htmlload-mumbai', function(event) {
   const file = path.join(dataPath, 'table/mumbai.html');
   event.reply('mumbai-reply', file);
 })
 
-ipc.on('script_run', function () {
+ipc.on('script_run', function() {
   exec('python ./python/delhi.py');
   exec('python ./python/kolkata.py');
   exec('python ./python/mumbai.py');

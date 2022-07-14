@@ -14,26 +14,26 @@ const i = document.getElementById("mxr");
 
 // close app here //
 close.addEventListener("click", e => {
-    ipc.send('closeApp')
+  ipc.send('closeApp')
 });
 // end //
 
 // minimize app here //
 min.addEventListener("click", () => {
-    ipc.send('minApp');
+  ipc.send('minApp');
 });
 // end //
 
 // maximizeRestore app here //
 max.addEventListener("click", () => {
-    ipc.send('maxApp');
+  ipc.send('maxApp');
 });
 // end //
 
 ipc.on("changeImx", (et, message) => {
-    i.setAttribute("srcset", "assets/icons/minimize-2.svg");
+  i.setAttribute("srcset", "assets/icons/minimize-2.svg");
 });
 
 ipc.on("changeIr", (t, message) => {
-    i.setAttribute("srcset", "assets/icons/maximize-2.svg");
+  i.setAttribute("srcset", "assets/icons/maximize-2.svg");
 }) 

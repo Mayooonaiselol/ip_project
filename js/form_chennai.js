@@ -1,24 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const cform = document.getElementById('form_chennai');
-    cform.addEventListener("submit", handleSubmit_chennai);
+document.addEventListener('DOMContentLoaded', function() {
+  const cform = document.getElementById('form_chennai');
+  cform.addEventListener("submit", handleSubmit_chennai);
 
-    function handleSubmit_chennai(event) {
-        event.preventDefault();
-        const data = new FormData(event.target);
+  function handleSubmit_chennai(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
 
-        const value = Object.fromEntries(data.entries());
-        var contents = JSON.stringify(value);
+    const value = Object.fromEntries(data.entries());
+    var contents = JSON.stringify(value);
 
-        console.log({ value });
-        const cityname = 'chennai.json'
-        ipcRenderer.send('form-city', cityname, contents)
+    console.log({ value });
+    const cityname = 'chennai.json'
+    ipcRenderer.send('form-city', cityname, contents)
 
-        ipcRenderer.on('form-city-reply', function (event_response) {
-            if (event_response = "yes") {
-                window.location.replace("../src/thanks.html")
-            } else {
-                console.log("fail")
-            }
-        })
-    }
+    ipcRenderer.on('form-city-reply', function(event_response) {
+      if (event_response = "yes") {
+        window.location.replace("../src/thanks.html")
+      } else {
+        console.log("fail")
+      }
+    })
+  }
 })

@@ -5,6 +5,6 @@ console.log(viewportHeight, viewportWidth);
 
 console.log("IP Project 12 E, UI/UX desgined by Ansh Gupta.")
 
-document.addEventListener('DOMContentLoaded', function () {
-    ipcRenderer.send('inspect')
+document.addEventListener('DOMContentLoaded', function() {
+  ipcRenderer.send('inspect')
 })
