@@ -242,6 +242,7 @@ h1 {
 
 .link {
   background: none;
+  outline: none;
   border: none;
   text-decoration: none;
   color: #777;
@@ -251,9 +252,14 @@ h1 {
   padding: 0;
 }
 
+.link:focused {
+  outline: none;
+}
+
 .dropdown.active>.link,
 .link:hover {
   color: black;
+  outline: none;
   text-decoration: none;
 }
 
