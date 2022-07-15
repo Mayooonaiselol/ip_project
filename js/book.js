@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   const cform = document.getElementById('bookform');
-  cform.addEventListener("submit", handleSubmit);
+  cform.addEventListener("submit", handleSubmit_book);
 
-  function handleSubmit(event) {
+  function handleSubmit_book() {
+    event.preventDefault();
     window.location.replace("../src/thanks.html")
   }
 })
