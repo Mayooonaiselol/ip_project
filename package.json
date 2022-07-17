@@ -20,7 +20,9 @@
     ],
     "linux": {
       "target": [
-        "rpm"
+        "deb",
+        "rpm",
+        "AppImage"
       ],
       "desktop": {
         "Name": "Holiday Hype",
@@ -31,7 +33,13 @@
       "target": [
         "nsis"
       ],
+      "icon": "build",
       "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "build",
+      "uninstallerIcon": "build",
+      "uninstallDisplayName": "Holiday Hype"
     },
     "deb": {
       "maintainer": "Mayooonaiselol <anshgupta3552@gmail.com>",
