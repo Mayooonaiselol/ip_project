@@ -9,17 +9,15 @@ const { exec } = require('node:child_process');
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1100,
-    height: 700,
-    minWidth: 940,
-    minHeight: 560,
+    minWidth: 1100,
+    minHeight: 700,
     frame: false,
     icon: path.join(__dirname, 'assets/icons/64.png'),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
       enableRemoteModule: true,
-      devTools: true,
+      devTools: false,
       preload: path.join(__dirname, 'preload.js'),
     }
   })
