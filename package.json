@@ -7,7 +7,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "build-installer": "electron-builder"
+    "build-installer": "electron-builder --dir"
   },
   "build": {
     "extraResources": [
@@ -34,10 +34,6 @@
     },
     "deb": {
       "maintainer": "Mayooonaiselol"
-    },
-    "directories":{
-        "buildResources":"build",
-        "output":"release"
     },
     "files": [
       "build/**/*"
