@@ -14,7 +14,7 @@ function createWindow() {
     minWidth: 940,
     minHeight: 560,
     frame: false,
-    icon: path.join(__dirname, 'assets/icons/64.png'),
+    icon: path.join(__dirname, 'assets/icons/icon.icns'),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -71,6 +71,7 @@ app.on('window-all-closed', function() {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
+
 ipc.on('form-city', function(event, cityname, contents) {
   const dir = path.join(dataPath, 'jsondata');
   if (!fs.existsSync(dir)) {
@@ -86,11 +87,18 @@ ipc.on('form-city', function(event, cityname, contents) {
   const event_response = "yes"
   event.reply('form-city-reply', event_response)
 
+  const mumbai_json = path.join(__dirname, 'extraResources/python','mumbai_jsoncsv.py')
+  const kolkata_json = path.join(__dirname, 'extraResources/python','kolkata_jsoncsv.py')
+  const delhi_json = path.join(__dirname, 'extraResources/python','delhi_jsoncsv.py')
+  const chennai_json = path.join(__dirname, 'extraResources/python','chennai_jsoncsv.py')
+  
+
+
   const executePythonConfig = {
-    'mumbai.json': () => exec('python ./python/mumbai_jsoncsv.py'),
-    'chennai.json': () => exec('python ./python/chennai_jsoncsv.py'),
-    'delhi.json': () => exec('python ./python/delhi_jsoncsv.py'),
-    'kolkata.json': () => exec('python ./python/kolkata_jsoncsv.py'),
+    'mumbai.json': () => exec(`python ${mumbai_json}`),
+    'chennai.json': () => exec(`python ${chennai_json}`),
+    'delhi.json': () => exec(`python ${delhi_json}`),
+    'kolkata.json': () => exec(`python ${kolkata_json}`),
   };
 
   executePythonConfig[cityname]?.();
@@ -129,10 +137,17 @@ ipc.on('inspect', function() {
     }
   }
 
-  exec('python ./python/chennai.py')
-  exec('python ./python/delhi.py')
-  exec('python ./python/kolkata.py')
-  exec('python ./python/mumbai.py')
+  const csspath = path.join(__dirname, 'extraResources/css','styles.css')
+
+  const mumbai_py = path.join(__dirname, 'extraResources/python','mumbai.py')
+  const kolkata_py = path.join(__dirname, 'extraResources/python','kolkata.py')
+  const delhi_py = path.join(__dirname, 'extraResources/python','delhi.py')
+  const chennai_py = path.join(__dirname, 'extraResources/python','chennai.py')
+
+  exec(`python ${mumbai_py} ${csspath}`)
+  exec(`python ${chennai_py} ${csspath}`)
+  exec(`python ${kolkata_py} ${csspath}`)
+  exec(`python ${delhi_py} ${csspath}`)
 })
 
 ipc.on('htmlload-chennai', function(event) {
@@ -156,8 +171,15 @@ ipc.on('htmlload-mumbai', function(event) {
 })
 
 ipc.on('script_run', function() {
-  exec('python ./python/delhi.py');
-  exec('python ./python/kolkata.py');
-  exec('python ./python/mumbai.py');
-  exec('python ./python/chennai.py');
+  const csspath = path.join(__dirname, 'extraResources/css','styles.css')
+
+  const mumbai_py = path.join(__dirname, 'extraResources/python','mumbai.py')
+  const kolkata_py = path.join(__dirname, 'extraResources/python','kolkata.py')
+  const delhi_py = path.join(__dirname, 'extraResources/python','delhi.py')
+  const chennai_py = path.join(__dirname, 'extraResources/python','chennai.py')
+
+  exec(`python ${mumbai_py} ${csspath}`)
+  exec(`python ${chennai_py} ${csspath}`)
+  exec(`python ${kolkata_py} ${csspath}`)
+  exec(`python ${delhi_py} ${csspath}`)
 })

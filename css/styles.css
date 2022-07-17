@@ -240,6 +240,14 @@ h1 {
   display: none;
 }
 
+a {
+  outline = none;
+}
+
+a:focus {
+  outline = none;
+}
+
 .link {
   background: none;
   outline: none;

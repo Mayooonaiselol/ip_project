@@ -1,14 +1,14 @@
+import sys
 from pathlib import Path
 import pandas as pd
 from script import *
 
 userdata = get_user_data_dir('ip_project')
 
-p = Path("./css/styles.css").resolve()
-c = str(p)
+p = sys.argv[1]
 
-tbfile = Path(userdata, "table/kolkata.html")
-csvrecord = Path(userdata, "records/kolkata.csv")
+tbfile = Path(userdata, "table/mumbai.html")
+csvrecord = Path(userdata, "records/mumbai.csv")
 
 f = open(tbfile, "r+") 
   
@@ -39,8 +39,7 @@ with open(tbfile, "a+") as file_object:
     if len(data) > 0 :
         file_object.write("\n")
     # Append text at the end of file
-    print(c)
-    file_object.write("<link href='" + c + "' " "rel='stylesheet'>")
+    file_object.write("<link href='" + p + "' " "rel='stylesheet'>")
 
 new_line = "<!DOCTYPE html>\n"
 
