@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 from script import *
 
-userdata = get_user_data_dir('ip_project')
+userdata = get_user_data_dir('holiday-hype')
 
 # set path to file
 p = Path(userdata, r'jsondata/chennai.json')

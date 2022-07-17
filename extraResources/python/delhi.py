@@ -3,7 +3,7 @@ from pathlib import Path
 import pandas as pd
 from script import *
 
-userdata = get_user_data_dir('ip_project')
+userdata = get_user_data_dir('holiday-hype')
 
 p = sys.argv[1]
 

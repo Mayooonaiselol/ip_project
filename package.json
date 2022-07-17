@@ -58,13 +58,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mayooonaiselol/ip_project.git"
+    "url": "git+https://github.com/Mayooonaiselol/Holiday-Hype.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mayooonaiselol/ip_project/issues"
+    "url": "https://github.com/Mayooonaiselol/Holiday-Hype/issues"
   },
-  "homepage": "https://github.com/Mayooonaiselol/ip_project#readme",
+  "homepage": "https://github.com/Mayooonaiselol/Holiday-Hype#readme",
   "devDependencies": {
     "electron": "^19.0.8",
     "electron-builder": "^23.1.0",
