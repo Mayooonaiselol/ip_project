@@ -1,13 +1,12 @@
 {
-  "name": "ip_project",
+  "name": "holiday-hype",
   "version": "1.0.0",
-  "description": "TBA",
+  "description": "Book hotels",
   "main": "main.js",
+  "author": "Mayooonaiselol <anshgupta3552@gmail.com>",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "build-installer": "electron-builder --dir"
+    "start": "electron .",
+    "build-installer": "electron-builder"
   },
   "build": {
     "extraResources": [
@@ -21,10 +20,12 @@
     ],
     "linux": {
       "target": [
-        "deb",
-        "rpm",
-        "AppImage"
-      ]
+        "rpm"
+      ],
+      "desktop": {
+        "Name": "Holiday Hype",
+        "Icon": "build"
+      }
     },
     "win": {
       "target": [
@@ -33,11 +34,16 @@
       "requestedExecutionLevel": "requireAdministrator"
     },
     "deb": {
-      "maintainer": "Mayooonaiselol"
+      "maintainer": "Mayooonaiselol <anshgupta3552@gmail.com>",
+      "icon": "build"
     },
-    "files": [
-      "build/**/*"
-    ]
+    "rpm": {
+      "maintainer": "Mayooonaiselol <anshgupta3552@gmail.com>",
+      "icon": "build"
+    },
+    "directories": {
+      "buildResources": "build"
+    }
   },
   "repository": {
     "type": "git",
@@ -50,42 +56,10 @@
   },
   "homepage": "https://github.com/Mayooonaiselol/ip_project#readme",
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.64",
-    "@electron-forge/maker-deb": "^6.0.0-beta.64",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.64",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.64",
-    "@electron-forge/maker-zip": "^6.0.0-beta.64",
     "electron": "^19.0.8",
     "electron-builder": "^23.1.0"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0"
-  },
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "ip_project"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
-  }
+  } 
 }
