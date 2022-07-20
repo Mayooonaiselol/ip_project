@@ -8,6 +8,8 @@ We have to select a city in order to book a hotel, and then click on book hotel 
 
 We can also advertize a hotel by selecting a city and clicking on advertize, and then filling the form.
 
+You can download installers for linux and windows [here](https://github.com/Mayooonaiselol/Holiday-Hype/releases)
+
 ## Showcase
 
 ![Book Hotels](Screenshots/Screenshot_20220720_213843.png)
