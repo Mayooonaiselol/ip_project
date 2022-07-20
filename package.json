@@ -37,7 +37,7 @@
     "win": {
       "target": [
         "nsis",
-        "squirrelWindows"
+        "squirrel"
       ],
       "icon": "build",
       "requestedExecutionLevel": "requireAdministrator"
