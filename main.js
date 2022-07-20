@@ -5,6 +5,9 @@ const ipc = ipcMain
 const dataPath = app.getPath('userData');
 const { exec } = require('node:child_process');
 
+const setup = path.join(process.resourcesPath, 'extraResources/python', 'setup.py')
+exec(`python ${setup}`)
+
 function createWindow() {
   const mainWindow = new BrowserWindow({
     minWidth: 1100,
