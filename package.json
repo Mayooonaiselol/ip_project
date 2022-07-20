@@ -36,16 +36,10 @@
     },
     "win": {
       "target": [
-        "nsis",
         "squirrel"
       ],
       "icon": "build",
       "requestedExecutionLevel": "requireAdministrator"
-    },
-    "nsis": {
-      "installerIcon": "build",
-      "uninstallerIcon": "build",
-      "uninstallDisplayName": "Holiday Hype"
     },
     "deb": {
       "maintainer": "Mayooonaiselol <anshgupta3552@gmail.com>",
