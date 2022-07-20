@@ -18,6 +18,9 @@
         ]
       }
     ],
+    "directories": {
+      "buildResources": "build"
+    },
     "linux": {
       "target": [
         "deb",
@@ -28,7 +31,7 @@
       ],
       "desktop": {
         "Name": "Holiday Hype",
-        "Icon": "./assets/icons"
+        "Icon": "build"
       }
     },
     "win": {
@@ -36,21 +39,21 @@
         "nsis",
         "squirrelWindows"
       ],
-      "icon": "./assets/icons",
+      "icon": "build",
       "requestedExecutionLevel": "requireAdministrator"
     },
     "nsis": {
-      "installerIcon": "./assets/icons",
-      "uninstallerIcon": "./assets/icons",
+      "installerIcon": "build",
+      "uninstallerIcon": "build",
       "uninstallDisplayName": "Holiday Hype"
     },
     "deb": {
       "maintainer": "Mayooonaiselol <anshgupta3552@gmail.com>",
-      "icon": "./assets/icons"
+      "icon": "build"
     },
     "rpm": {
       "maintainer": "Mayooonaiselol <anshgupta3552@gmail.com>",
-      "icon": "./assets/icons"
+      "icon": "build"
     }
   },
   "repository": {
