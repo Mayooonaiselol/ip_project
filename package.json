@@ -6,7 +6,7 @@
   "author": "anshg",
   "scripts": {
     "start": "electron .",
-    "build-installer": "electron-builder"
+    "make": "electron-builder" 
   },
   "build": {
     "extraResources": [
@@ -22,13 +22,13 @@
       "target": [
         "deb",
         "rpm",
-        "AppImage",
         "zip",
-        "tar.gz"
+        "tar.gz",
+        "AppImage"
       ],
       "desktop": {
         "Name": "Holiday Hype",
-        "Icon": "build"
+        "Icon": "./assets/icons"
       }
     },
     "win": {
@@ -36,41 +36,35 @@
         "nsis",
         "squirrelWindows"
       ],
-      "icon": "build",
+      "icon": "./assets/icons",
       "requestedExecutionLevel": "requireAdministrator"
     },
     "nsis": {
-      "installerIcon": "build",
-      "uninstallerIcon": "build",
+      "installerIcon": "./assets/icons",
+      "uninstallerIcon": "./assets/icons",
       "uninstallDisplayName": "Holiday Hype"
     },
     "deb": {
       "maintainer": "Mayooonaiselol <anshgupta3552@gmail.com>",
-      "icon": "build"
+      "icon": "./assets/icons"
     },
     "rpm": {
       "maintainer": "Mayooonaiselol <anshgupta3552@gmail.com>",
-      "icon": "build"
-    },
-    "directories": {
-      "buildResources": "build"
+      "icon": "./assets/icons"
     }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mayooonaiselol/Holiday-Hype.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mayooonaiselol/Holiday-Hype/issues"
   },
   "homepage": "https://github.com/Mayooonaiselol/Holiday-Hype#readme",
   "devDependencies": {
     "electron": "^19.0.8",
-    "electron-builder": "^23.1.0",
-    "electron-builder-squirrel-windows": "^23.3.1"
-  },
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-builder-squirrel-windows": "^23.3.1",
+    "electron-builder": "^23.1.0"
   }
-}
+ }
