@@ -2,7 +2,7 @@
 
 [Skip to Installation](https://github.com/Mayooonaiselol/Holiday-Hype/tree/master#install)
 
-Holiday Hype is a electron app which also utilizes python's libraries and uses csv files to store data. It is made on the topic "hotel booking".
+Holiday Hype is a electron app which utilizes python's libraries and uses csv files to store data. It is made on the topic "hotel booking".
 
 We have to select a city in order to book a hotel, and then click on book hotel to book the hotel in the city we have selected and then fill the form.
 
@@ -31,7 +31,13 @@ git clone https://github.com/Mayooonaiselol/Holiday-Hype.git
 cd Holiday-Hype
 ```
 
-Assuming you read the note, install node modules:
+Install node modules:
+
+```bash
+npm install
+```
+
+Assuming you read the note, to run the app:
 
 ```bash
 npm start
